@@ -1,31 +1,65 @@
-const form = document.querySelector('form')
-const output = document.querySelector('#output')
+const form = document.querySelector('form');
+const output = document.querySelector('#output');
 
 const ideas = [
   "Juniors should focus on HTML, CSS and JS instead of frameworks, here's why",
-  "React is terrible and it ruined my day",
-  "View Transitions and speculative rendering: why MPAs have a comeback",
-  "New Map and Set methods in JS",
-  "You need to try CSS container queries",
-  "How to not spend $10,000 on AWS",
+  'React is terrible and it ruined my day',
+  'View Transitions and speculative rendering: why MPAs have a comeback',
+  'New Map and Set methods in JS',
+  'You need to try CSS container queries',
+  'How to not spend $10,000 on AWS',
   "I tried writing my own JS framework so you don't have to",
-  "CSS rem vs em",
-  "Is Tailwind really that bad? Yes.",
+  'CSS rem vs em',
+  'Is Tailwind really that bad? Yes.',
   "5 HTML elements you should likely know but don't",
-  "HTML popovers vs dialogs",
-  "Can I hear your website?",
-  "Should you generate alt text with AI?",
-  "How does AI change the a11y landscape?",
-  "Do we have too many web APIs?",
+  'HTML popovers vs dialogs',
+  'Can I hear your website?',
+  'Should you generate alt text with AI?',
+  'How does AI change the a11y landscape?',
+  'Do we have too many web APIs?',
   "Why aren't PWAs more popular?",
-  "How to start a local tech meetup",
-  "How to give an engaging tech talk",
-  "Do you really know the CSS cascade?"
-]
+  'How to start a local tech meetup',
+  'How to give an engaging tech talk',
+  'Do you really know the CSS cascade?',
+  'TypeScript: Safety net or developer crutch?',
+  'Framework churn is burning out developers — what now?',
+  'HTML is a backend problem now',
+  "The web is fast, your code isn't",
+  'WebAssembly in 2025: What can you actually use it for?',
+  "Why you're sleeping on the Web Share API",
+  'Forget :hover — CSS @scroll-timeline is here',
+  'Why WebRTC still feels like magic',
+  "The myth of 'vanilla JS': What it really means to go framework-free",
+  'What if the web had versioning?',
+  'The dark side of DX: when developer experience ruins user experience',
+  'The web’s secret layout engine: Writing Modes',
+  "Everything is a form: accessible UI patterns you're misusing",
+  'The JS event loop, visualized — again, but better',
+  'Why your single-page app should be a multi-page app',
+  'Building animations without JavaScript: CSS is enough',
+  'Why you should stop using divs for everything',
+  "Client Components vs Server Components: React's identity crisis",
+  'How good is too good? When UX starts to feel fake',
+  "Forms are still broken — here's how to fix them",
+  'Are you accidentally making your site unusable with prefers-reduced-motion?',
+  'The uncanny valley of loading skeletons',
+  'Stop breaking the back button: routing done right',
+  'Web Components: still underrated, still weird',
+  'The hidden power of the <label> element',
+  'Do we still need responsive design in 2025?',
+  "You don't need JS for dropdowns — seriously",
+  'Light DOM vs Shadow DOM: what even is happening?',
+  'The anatomy of a perfect button',
+  'Is it time to ditch media queries for container queries?',
+  "What's wrong with your CSS naming conventions?",
+  'Can we stop arguing about Tailwind now?',
+  'Semantic HTML is not just for screen readers',
+  "You don't need a design system, you need discipline",
+];
 
-const chooseAtRandom = arr => arr[Math.floor(Math.random() * arr.length)];
+const chooseAtRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 form.onsubmit = (e) => {
   e.preventDefault();
-  output.innerText = chooseAtRandom(ideas)
-}
+  output.innerText = chooseAtRandom(ideas);
+};
